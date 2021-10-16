@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">AndroidDz.1</string>
+    <string name="new_user_sign_up">NEW USER? SIGN UP</string>
+    <string name="go">GO</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="password">Password</string>
+    <string name="username">UserName</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="hello_there_n_wellcome_back">HELLO THERE, \nWELLCOME BACK</string>
+    <string name="edit_photo">Edit Photo</string>
+    <string name="private_information">Private Information</string>
+    <string name="name">name</string>
+    <string name="surname">surname</string>
+    <string name="email">Email</string>
+    <string name="number">number</string>
+</resources>
