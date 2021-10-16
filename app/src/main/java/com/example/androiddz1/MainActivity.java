@@ -21,26 +21,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setinitView();
         setImage();
-        intent();
+        listen_Listener();
     }
 
-    private void intent() {
+    private void listen_Listener() {
         btn_go.setOnClickListener(v -> {
             if (password.getText().toString().length() > 6 && username.getText().toString().length() > 1) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);
                 intent.putExtra("password",password.getText().toString() );
                 intent.putExtra("username", username.getText().toString());
                 startActivity(intent);
-            } else if (password.getText().toString().length() > 6) {
-                password.setError("пароль меньше 6");
-            } else if (username.getText().toString().length() > 1) {
-                username.setError("Вы забыли username");
+            }else if (password.getText().toString().isEmpty() && username.getText().toString().isEmpty()){
+                username.setError(getString(R.string.username_equals_null));
+                password.setError(getString(R.string.password_equals_null));
+            } else if (password.getText().toString().length() < 6 ) {
+                password.setError(getString(R.string.password_smaller_6));
+            } else if (username.getText().toString().length() < 1) {
+                username.setError(getString(R.string.you_forgot_username));
             }
         });
     }
 
     private void setImage() {
-        Glide.with(this).load("https://i.pinimg.com/474x/23/ab/a6/23aba60b66ef08174bb7455c4a8a2d2f.jpg").into(imV);
+        Glide.with(this).load(getString(R.string.ic_pinimg)).into(imV);
     }
 
     private void setinitView() {

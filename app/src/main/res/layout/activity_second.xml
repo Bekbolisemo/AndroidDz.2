@@ -11,6 +11,8 @@
         android:id="@+id/image_view"
         android:layout_width="150dp"
         android:layout_height="150dp"
+        android:background="@drawable/rounded"
+        android:src="@drawable/ic_baseline_person_24"
         android:layout_marginTop="@dimen/page_margin"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
