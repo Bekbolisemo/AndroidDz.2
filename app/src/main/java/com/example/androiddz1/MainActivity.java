@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setinitView();
+        setInitView();
         setImage();
         btn_Click();
     }
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Glide.with(this).load(getString(R.string.ic_pinimg)).into(imV);
     }
 
-    private void setinitView() {
+    private void setInitView() {
         username = findViewById(R.id.username_Input_Edit_Text);
         password = findViewById(R.id.password_Input_Edit_Text);
         imV = findViewById(R.id.im_car);
