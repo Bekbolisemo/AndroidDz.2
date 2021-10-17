@@ -21,10 +21,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         setinitView();
         setImage();
-        listen_Listener();
+        btn_Click();
     }
 
-    private void listen_Listener() {
+    private void btn_Click() {
         btn_go.setOnClickListener(v -> {
             if (password.getText().toString().length() > 6 && username.getText().toString().length() > 1) {
                 Intent intent = new Intent(MainActivity.this, SecondActivity.class);

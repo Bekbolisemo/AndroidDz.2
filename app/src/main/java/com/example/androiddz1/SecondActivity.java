@@ -32,10 +32,8 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void putExtra() {
-        String m = getIntent().getStringExtra("username");
-        String p = getIntent().getStringExtra("password");
-        maill.setText(m);
-        password.setText(p);
+        maill.setText(getIntent().getStringExtra("username"));
+        password.setText(getIntent().getStringExtra("password"));
     }
 
     private void photoClik() {
@@ -60,6 +58,9 @@ public class SecondActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+
+
         if(requestCode == GALIREA && resultCode == RESULT_OK && data != null ){
             Glide.with(this).load(data.getData().toString()).circleCrop().into(image);
 
